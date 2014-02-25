@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7"> <![endif]-->
+<!--[if !IE]><!-->
+<html>
+
+<head>
+	<link href="stylesheet.css" rel="stylesheet">
+	<script>
+	    $(".timeline-item").hover(function () {
+	        $(".timeline-item").removeClass("active");
+	        $(this).toggleClass("active");
+	        $(this).prev(".timeline-item").toggleClass("close");
+	        $(this).next(".timeline-item").toggleClass("close");
+	    });
+			
+            $(document).on("pagecreate",function(){
+                $("div").on("taphold",function(){
+    		    $(".timeline-item").removeClass("active");
+    		    $(this).toggleClass("active");
+    		    $(this).prev(".timeline-item").toggleClass("close");
+    		    $(this).next(".timeline-item").toggleClass("close");
+                 });                       
+            });
+	</script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        	<h1>Timeline Example</h1>
+        </header>
+	<section class="page">
+	    <div class="timeline">
+		<div class="timeline-item">
+		    <div class="year">1987
+		        <span class="marker"><span class="dot"></span></span>
+		    </div>
+		    <div class="info">Sample item #1<br>
+				<span class="url"><a href="casoncode.com">Sample URL</a></span>
+		    </div>
+		</div>
+		<div class="timeline-item">
+		    <div class="year">2000
+		        <span class="marker"><span class="dot"></span></span>
+		    </div>
+		    <div class="info">Sample item #2<br>
+				<span class="url"><a href="casoncode.com">Sample URL</a></span>
+		    </div>
+		</div>
+		<div class="timeline-item">
+		    <div class="year">2005
+		        <span class="marker"><span class="dot"></span></span>
+		    </div>
+		    <div class="info">Sample item #3<br>
+				<span class="url"><a href="casoncode.com">Sample URL</a></span>
+		    </div>
+		</div>
+		<div class="timeline-item">
+		    <div class="year">2014
+		        <span class="marker"><span class="dot"></span></span>
+		    </div>
+		    <div class="info last">Last item on timeline<br>
+				<span class="url"><a href="casoncode.com">Sample URL</a></span>
+		    </div>
+		</div>
+	    </div>
+	</section
+	<footer></footer>
+    </div>
+</body>
+</html>
