@@ -5,9 +5,17 @@ updates:
     reviewers: castastrophe
     open-pull-requests-limit: 10
     commit-message:
+      prefix: chore
       include: scope
     schedule:
       interval: "weekly"
       day: "sunday"
       time: "23:00"
       timezone: "America/New_York"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "castastrophe"
