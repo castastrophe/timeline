@@ -2,7 +2,8 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    reviewers: castastrophe
+    reviewers:
+      - castastrophe
     open-pull-requests-limit: 10
     commit-message:
       prefix: chore
