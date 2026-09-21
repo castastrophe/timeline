@@ -8,18 +8,11 @@ development loop.
 This is an old demo kept for reference. Treat changes as conservative maintenance
 rather than modernization, unless asked otherwise.
 
-## Known issue: read before touching the JS
+## TODO
 
-The inline `<script>` in `timeline.html` uses jQuery (`$(".timeline-item").hover(…)`),
-but jQuery is never loaded on the page. The hover interaction has therefore never
-worked in this file as committed. Two honest options if it comes up:
-
-1. Rewrite the handler in plain DOM APIs: it's about six lines, and it's what the
-   rest of the file's age argues for.
-2. Add the jQuery `<script>` tag and keep it as-is.
-
-Either is fine. What isn't fine is quietly "fixing" surrounding code while leaving the
-handler dead, which is how it got this far.
+- [#2](https://github.com/castastrophe/timeline/issues/2): the inline hover handler
+  calls jQuery, which the page never loads, so the interaction has never worked.
+  Decide there before touching the JS.
 
 ## Structure
 
